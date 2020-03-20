@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Core\Services\" />
+    <Folder Include="Domain\Messages\Events\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\OnHandTracker.Domain\OnHandTracker.Domain.csproj" />
+    <ProjectReference Include="..\..\OnHandTracker.Core\OnHandTracker.Core.csproj" />
+  </ItemGroup>
+
+</Project>

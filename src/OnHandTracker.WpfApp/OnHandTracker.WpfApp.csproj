@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc" Version="7.2.0.1422" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\OnHandTracker.Modules.OnHand\OnHandTracker.Modules.OnHand.csproj" />
+    <ProjectReference Include="..\OnHandTracker.Core\OnHandTracker.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Selectors\" />
+  </ItemGroup>
+
+</Project>

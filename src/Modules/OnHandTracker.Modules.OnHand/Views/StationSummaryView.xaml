@@ -1,0 +1,15 @@
+﻿<ListViewItem x:Class="OnHandTracker.Modules.OnHand.Views.StationSummaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:templateSelectors="clr-namespace:OnHandTracker.Core.TemplateSelectors;assembly=OnHandTracker.Core"
+             Padding="0" MinHeight="45" VerticalContentAlignment="Center">
+    <StackPanel Orientation="Horizontal">
+        <ContentPresenter Height="20" Width="20" Content="{Binding Icon}">
+            <ContentPresenter.ContentTemplateSelector>
+                <templateSelectors:IconTemplateSelector/>
+            </ContentPresenter.ContentTemplateSelector>
+        </ContentPresenter>
+        <TextBlock Text="{Binding Label}" Margin="10"/>
+    </StackPanel>
+</ListViewItem>
