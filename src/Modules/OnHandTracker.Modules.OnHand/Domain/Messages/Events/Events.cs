@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using OnHandTracker.Modules.OnHand.Models;
 
 namespace OnHandTracker.Modules.OnHand.Domain.Messages.Events
 {

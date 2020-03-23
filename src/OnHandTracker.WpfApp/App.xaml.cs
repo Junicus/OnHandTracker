@@ -1,6 +1,12 @@
 ﻿using System.Windows;
+using DryIoc;
+using DryIoc.Microsoft.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using OnHandTracker.Modules.OnHand;
 using OnHandTracker.WpfApp.Views;
+using Prism.DryIoc.Ioc;
 using Prism.Ioc;
 using Prism.Modularity;
 

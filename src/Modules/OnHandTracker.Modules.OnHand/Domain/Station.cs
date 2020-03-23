@@ -16,6 +16,7 @@ namespace OnHandTracker.Modules.OnHand.Domain
 
         private OnHandId ParentId { get; set; }
         public StationName StationName { get; private set; }
+        public IEnumerable<Item> Items => _items;
 
         protected override void When(object @event)
         {
@@ -26,6 +27,13 @@ namespace OnHandTracker.Modules.OnHand.Domain
                     ParentId = OnHandId.FromGuid(e.OnHandId);
                     StationName = StationName.FromString(e.StationName);
                     _items = new List<Item>();
+                    break;
+                case V1.ItemAddedToStation e:
+                    {
+                        var item = new Item(Apply);
+                        item.Handle(e);
+                        _items.Add(item);
+                    }
                     break;
             }
         }

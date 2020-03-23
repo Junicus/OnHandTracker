@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using OnHandTracker.Domain;
 using OnHandTracker.Modules.OnHand.Domain.Messages.Events;
-using OnHandTracker.Modules.OnHand.Models;
 
 namespace OnHandTracker.Modules.OnHand.Domain.OnHands
 {
@@ -27,6 +26,13 @@ namespace OnHandTracker.Modules.OnHand.Domain.OnHands
             OnHandId = Id,
             StationId = Guid.NewGuid(),
             StationName = stationName,
+        });
+
+        public void AddItemToStation(Guid stationId, Guid itemId, string itemName) => Apply(new V1.ItemAddedToStation
+        {
+            StationId = stationId,
+            ItemId = itemId,
+            ItemName = itemName
         });
 
         public OnHandState State { get; private set; }
